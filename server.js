@@ -109,8 +109,4 @@ app.post('/upload', upload.array('images', 20), (req, res) => {
     res.send(`Zdjęcia zostały przesłane. Linki do zdjęć: <br> ${imageUrls.join('<br>')}`);
 });
 
-// Uruchomienie serwera na porcie 3000
-const port = process.env.PORT || 3000; 
-app.listen(port, () => {
-    console.log(`Serwer działa na porcie ${port}`);
-});
+
