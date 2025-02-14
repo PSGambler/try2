@@ -4,9 +4,21 @@ const mongoose = require('mongoose');
 const path = require('path'); // Import modułu 'path'
 const fs = require('fs');
 const multer = require('multer');
+const app = express();
+// Ustawienie katalogu dla plików statycznych
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Obsługa głównej ścieżki "/"
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Port dla Render (Render wymaga process.env.PORT)
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Serwer działa na porcie ${PORT}`));
 
 // Inicjalizacja aplikacji Express
-const app = express();
+
 
 // Middleware
 app.use(cors({
@@ -93,7 +105,8 @@ app.post('/upload', upload.array('images', 20), (req, res) => {
     res.send(`Zdjęcia zostały przesłane. Linki do zdjęć: <br> ${imageUrls.join('<br>')}`);
 });
 
-const PORT = process.env.PORT || 3000;  // Było 10000, ale Render wymaga process.env.PORT
+// Uruchomienie serwera na porcie 3000
+const port = process.env.PORT || 3000; 
 app.listen(port, () => {
     console.log(`Serwer działa na porcie ${port}`);
 });
