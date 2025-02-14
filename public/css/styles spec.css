@@ -1,0 +1,168 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fff;
+}
+header {
+    background: linear-gradient(90deg, #e63946, #6a0572);
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start; /* Zmiana z center na flex-start */
+    justify-content: space-between;
+}
+.spec-text {
+    flex: 1;
+    text-align: left;
+}
+.motorcycle-thumbnail img {
+    width: 100%; /* Zmiana ze stałej szerokości */
+    max-width: 400px; /* Maksymalna szerokość */
+    height: auto; /* Usunięcie stałej wysokości */
+    aspect-ratio: inherit; /* Zachowaj proporcje */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.motorcycle-thumbnail img:hover {
+    transform: scale(1.05);
+}
+#fullscreen-view {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+#fullscreen-image {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid white;
+}
+#close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+}
+.gallery-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+#prev-btn {
+    left: 20px;
+}
+#next-btn {
+    right: 20px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background: #444;
+    padding: 0.75rem 0;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+nav a:hover {
+    background: #e63946;
+}
+.csc-description ul {
+list-style: none;
+padding-left: 0; /* Zmiana z 20px na 0 */
+}
+
+.csc-description li {
+margin-bottom: 10px;
+padding-left: 30px;
+position: relative;
+font-size: 14px; /* Nowy rozmiar czcionki */
+}
+
+/* Media Query dla urządzeń mobilnych */
+@media (max-width: 768px) {
+.container {
+flex-direction: column; 
+padding: 15px;
+margin: 10px;
+}
+
+.motorcycle-thumbnail {
+width: 100%;
+margin-top: 20px;
+}
+
+.motorcycle-thumbnail img {
+max-width: 100%;
+height: auto;
+}
+
+.csc-description {
+margin-top: 14px;
+padding: 10px;
+}
+
+.csc-description h3 {
+font-size: 1.2em;
+}
+
+.csc-description li {
+padding-left: 25px;
+font-size: 16px;
+}
+
+.csc-description li:before {
+width: 18px;
+height: 18px;
+top: 2px;
+}
+}
+
+@media (max-width: 480px) {
+.spec-text {
+width: 100%;
+}
+
+#specs-list li {
+font-size: 16px;
+}
+
+.csc-description li {
+padding-left: 0;
+}
+
+.csc-description li:before {
+display: none; /* Ukryj emoji na bardzo małych ekranach */
+}
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honda Goldwing Trike 1800</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 id="header-title">Honda Goldwing Trike 1800</h1>
+        <div class="language-selector">
+            <button class="language-button" onclick="changeLanguage('pl')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Flag_of_Poland.svg" alt="Polska" class="flag">
+            </button>
+            <button class="language-button" onclick="changeLanguage('en')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg" alt="UK" class="flag">
+            </button>
+        </div>
+    </header>
+    <nav>
+        <a href="#about" id="nav-about">O mnie</a>
+        <a href="#specs" id="nav-specs">Specyfikacja</a>
+        <a href="#gallery" id="nav-gallery">Moje realizacje</a>
+        <a href="contact.html" id="nav-contact">Kontakt</a>
+    </nav>
+    <section id="about" class="section">
+        <div class="card">
+            <h2 id="about-title">O mnie</h2>
+            <p id="about-text">Mam na imię Zenon, a moja przygoda z Hondą Goldwing Trike to historia, która zaczęła się wiele lat temu i od tamtej pory nieustannie rozkwita. Jestem mężem, ojcem i dziadkiem, a moja rodzina zawsze była dla mnie największym wsparciem i inspiracją. To właśnie dzięki nim moja pasja do motoryzacji przerodziła się w coś więcej – w misję przywracania do życia legendarnych modeli Hondy Goldwing 1800 Trike.
+                Każdy projekt to dla mnie niezwykła podróż pełna emocji i wyzwań.Od pierwszego spojrzenia na zniszczony, zapomniany motocykl, przez żmudny proces renowacji, aż po moment, gdy maszyna znów ożywa i zachwyca swoim blaskiem – to są chwile, które napędzają mnie do działania. Każdy detal ma znaczenie, a jakość wykonania to coś, czego nigdy nie idę na kompromis.</p>
+            <p id="about-invited">Zapraszam Cię do mojego świata, gdzie każdy motocykl ma swoją niepowtarzalną historię. W moich realizacjach znajdziesz maszyny, które przeszły drugą młodość dzięki mojemu zaangażowaniu i pasji. Każda z nich jest jak członek rodziny ma swój charakter, duszę i opowieść, którą chętnie się z Tobą podzielę. To nie tylko pojazdy, to kawałki historii, które łączą ludzi i tworzą wspomnienia.
+                Jeśli któryś z modeli szczególnie Cię zainteresuje, zachęcam do kontaktu. Chętnie opowiem więcej o procesie renowacji, podzielę się ciekawostkami technicznymi i opowiem, co sprawia, że te motocykle są tak wyjątkowe. Moja pasja to coś, czym uwielbiam się dzielić, a każda rozmowa o Hondach Goldwing to dla mnie ogromna radość.</p>
+            <p id="about-thanks">Dziękuję, że jesteś tutaj ze mną. Mam nadzieję, że moje projekty zainspirują Cię tak samo, jak ja jestem inspirowany przez te niezwykłe maszyny. Razem możemy odkryć magię, która kryje się w każdym z tych pojazdów.Zapraszam do wspólnej podróży!</p>
+                <div class="about-image">
+                    <img src="http://localhost:3001/uploads/Index/1738447703570.JPG" alt="Zenon przy motocyklu">
+                </div>
+            </div>
+    </section>
+    <section id="specs" class="section">
+        <div class="card">
+            <h2 id="specs-title">Specyfikacja Techniczna</h2>
+            <ul id="specs-list">
+                <li>Silnik: 1800cc</li>
+                <li>Moc: 124 KM</li>
+                <li>Pojemność zbiornika: 21 litrów</li>
+                <li>Zaawansowane systemy bezpieczeństwa</li>
+            </ul>
+            <a href="details spec.html"class="thumbnail-link">Szczegóły</a>
+        </div>
+    </section>
+    <section id="gallery" class="section">
+        <div class="card">
+            <h2 id="motorcycle-title">Moje realizacje</h2>
+            <div class="motorcycle-gallery-container">
+            <!-- Pierwsza miniatura -->
+                <div class="motorcycle-thumbnails">
+                <img src="http://localhost:3001/uploads/GLWhite2012/1738439255148.jpg" alt="Motocykl 0" onclick="openFullscreen(0)">
+                <div class="thumbnail-caption">2012</div>
+                <a href="specyfikacja-techniczna1.html" class="thumbnail-link">Więcej</a>
+            </div>
+            <!-- Druga miniatura -->
+                <div class="motorcycle-thumbnails">
+                <img src=  "http://localhost:3001/uploads/GLYellow2010/1738443194264.jpeg" alt="Motocykl 1" onclick="openFullscreen(1)">
+                <div class="thumbnail-caption">2010</div>
+                <a href="specyfikacja-techniczna2.html" class="thumbnail-link">Więcej</a>
+            </div>
+              <!-- Trzeia miniatura -->
+                <div class="motorcycle-thumbnails">
+                <img src=  "http://localhost:3001/uploads/GLRed2008/1738445232798.webp" alt="Motocykl 2" onclick="openFullscreen(2)">
+                <div class="thumbnail-caption">2008</div>
+                <a href="specyfikacja-techniczna3.html" class="thumbnail-link">Więcej</a>
+            </div>
+                <!-- Czwarta miniatura -->
+                <div class="motorcycle-thumbnails">
+                    <img src="http://localhost:3001/uploads/GLRed_Silver2012/1738446796397.webp" alt="Motocykl 3" onclick="openFullscreen(3)">
+                    <div class="thumbnail-caption">2012</div>
+                    <a href="specyfikacja-techniczna4.html" class="thumbnail-link">Więcej</a>
+            </div>
+        </div>
+    
+        <!-- Widok pełnoekranowy -->
+        <div id="fullscreen-view" onclick="closeFullscreen()">
+            <span id="close-btn">&times;</span>
+            <button class id="prev-btn" onclick="changeImage(event, -1)">&#10094;</button>
+            <img id="fullscreen-image" alt="Pełnoekranowy obrazek">
+            <button class="gallery-btn" id="next-btn" onclick="changeImage(event, 1)">&#10095;</button>
+        </div>
+        <script>
+            // Grupy zdjęć dla każdej miniatury
+            const imageGroups = [
+                [ // GL White 2012
+                "http://localhost:3001/uploads/GLWhite2012/1738439255148.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255116.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255119.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255124.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255128.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255131.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255135.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255138.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255142.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255145.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255150.jpg",
+                ],
+                [ // Druga grupa (dla nowej miniatury)
+                "http://localhost:3001/uploads/GLYellow2010/1738443194264.jpeg",
+                "http://localhost:3001/uploads/GLYellow2010/1738443194230.jpeg",
+                "http://localhost:3001/uploads/GLYellow2010/1738443194236.jpeg",
+                "http://localhost:3001/uploads/GLYellow2010/1738443194241.jpeg",
+                "http://localhost:3001/uploads/GLYellow2010/1738443194245.jpeg",
+                "http://localhost:3001/uploads/GLYellow2010/1738443194247.jpeg",
+                "http://localhost:3001/uploads/GLYellow2010/1738443194249.jpeg",
+                "http://localhost:3001/uploads/GLYellow2010/1738443194253.jpeg",
+                "http://localhost:3001/uploads/GLYellow2010/1738443194257.jpeg",
+                "http://localhost:3001/uploads/GLYellow2010/1738443194259.jpeg",
+                "http://localhost:3001/uploads/GLYellow2010/1738443194262.jpeg",
+                ],
+                [ // Trzecia grupa (dla nowej miniatury)
+                "http://localhost:3001/uploads/GLRed2008/1738445232798.webp",
+                "http://localhost:3001/uploads/GLRed2008/1738445232803.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232816.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232831.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232842.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232855.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232866.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232875.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232885.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232897.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232907.jpeg",
+                ],
+                [ // Czwarta grupa (dla nowej miniatury)
+                "http://localhost:3001/uploads/GLRed_Silver2012/1738446796397.webp",
+                "http://localhost:3001/uploads/GLRed_Silver2012/1738446796399.jpeg",
+                "http://localhost:3001/uploads/GLRed_Silver2012/1738446796406.jpeg",
+                "http://localhost:3001/uploads/GLRed_Silver2012/1738446796413.jpeg",
+                "http://localhost:3001/uploads/GLRed_Silver2012/1738446796420.jpeg",
+                "http://localhost:3001/uploads/GLRed_Silver2012/1738446796428.jpeg",
+                "http://localhost:3001/uploads/GLRed_Silver2012/1738446796437.jpeg",
+                "http://localhost:3001/uploads/GLRed_Silver2012/1738446796446.jpeg",
+                ],
+            ];
+    
+            let currentImageIndex = 0;
+            let currentGroupIndex = 0;
+    
+            function openFullscreen(groupIndex) {
+                currentGroupIndex = groupIndex;
+                currentImageIndex = 0;
+                const fullscreenView = document.getElementById('fullscreen-view');
+                const fullscreenImage = document.getElementById('fullscreen-image');
+    
+                fullscreenImage.src = imageGroups[currentGroupIndex][currentImageIndex];
+                fullscreenView.style.display = 'flex';
+            }
+    
+            function closeFullscreen() {
+                document.getElementById('fullscreen-view').style.display = 'none';
+            }
+    
+            function changeImage(event, direction) {
+                event.stopPropagation();
+                const group = imageGroups[currentGroupIndex];
+    
+                currentImageIndex += direction;
+                if (currentImageIndex < 0) {
+                    currentImageIndex = group.length - 1;
+                } else if (currentImageIndex >= group.length) {
+                    currentImageIndex = 0;
+                }
+    
+                document.getElementById('fullscreen-image').src = group[currentImageIndex];
+            }
+        </script>
+    </section>
+    <section id="newsletter" class="section">
+        <div class="card">
+            <h2 id="newsletter-title"><br>Chcesz się dowiedzieć o nowych realizacjach,
+                zapisz się do Newslettera.</br></h2>
+            <form id="newsletter-form" onsubmit="submitNewsletter(event)">
+                <label for="name" id="newsletter-name-label">Imię:</label>
+                <input type="text" id="newsletter-name" name="name" required>
+                <label for="email" id="newsletter-email-label">E-mail:</label>
+                <input type="email" id="newsletter-email" name="email" required>
+                
+                <button type="submit">Zapisz się</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Honda Goldwing Trike 1800. Wszystkie prawa zastrzeżone. <a href="#">Polityka prywatności</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+    "pl": {
+        "headerTitle": "Honda Goldwing Trike 1800",
+        "navAbout": "O mnie",
+        "navSpecs": "Specyfikacja",
+        "navGallery": "Moje realizacje",
+        "navContact": "Kontakt",
+        "aboutTitle": "O mnie",
+        "aboutText": "Mam na imię Zenon, a moja przygoda z Hondą Goldwing Trike to historia, która zaczęła się wiele lat temu i od tamtej pory nieustannie rozkwita. Jestem mężem, ojcem i dziadkiem, a moja rodzina zawsze była dla mnie największym wsparciem i inspiracją. To właśnie dzięki nim moja pasja do motoryzacji przerodziła się w coś więcej – w misję przywracania do życia legendarnych modeli Hondy Goldwing 1800 Trike. Każdy projekt to dla mnie niezwykła podróż pełna emocji i wyzwań.",
+        "aboutInvited": "Zapraszam Cię do mojego świata, gdzie każdy motocykl ma swoją niepowtarzalną historię. W moich realizacjach znajdziesz maszyny, które przeszły drugą młodość dzięki mojemu zaangażowaniu i pasji. Każda z nich jest jak członek rodziny ma swój charakter, duszę i opowieść, którą chętnie się z Tobą podzielę. To nie tylko pojazdy, to kawałki historii, które łączą ludzi i tworzą wspomnienia.Jeśli któryś z modeli szczególnie Cię zainteresuje, zachęcam do kontaktu. Chętnie opowiem więcej o procesie renowacji, podzielę się ciekawostkami technicznymi i opowiem, co sprawia, że te motocykle są tak wyjątkowe. Moja pasja to coś, czym uwielbiam się dzielić, a każda rozmowa o Hondach Goldwing to dla mnie ogromna radość.",
+        "aboutThanks": "Dziękuję, że jesteś tutaj ze mną. Mam nadzieję, że moje projekty zainspirują Cię tak samo, jak ja jestem inspirowany przez te niezwykłe maszyny. Razem możemy odkryć magię, która kryje się w każdym z tych pojazdów.Zapraszam do wspólnej podróży!</p>",
+        "specsTitle": "Specyfikacja Techniczna",
+        "specsList": [
+            "Silnik: 1800cc",
+            "Moc: 124 KM",
+            "Pojemność zbiornika: 21 litrów",
+            "Zaawansowane systemy bezpieczeństwa"
+        ],
+        "specsLink": "Szczegóły",
+        "motorcycleGalleryTitle": "Moje realizacje",
+        "motorcycleLink": "Więcej",
+        "newsletterTitle": "Chcesz się dowiedzieć o nowych realizacjach, zapisz się do Newslettera.",
+        "newsletterNameLabel": "Imię:",
+        "newsletterEmailLabel": "E-mail:",
+        "newsletterButton": "Zapisz się",
+        "footerText": "&copy; 2025 Honda Goldwing Trike 1800. Wszystkie prawa zastrzeżone. <a href=\"#\">Polityka prywatności</a>"
+    },
+    "en": {
+        "headerTitle": "Honda Goldwing Trike 1800",
+        "navAbout": "About Me",
+        "navSpecs": "Specifications",
+        "navGallery": "My Projects",
+        "navContact": "Contact",
+        "aboutTitle": "About Me",
+        "aboutText": "My name is Zenon, and my adventure with the Honda Goldwing Trike is a story that began many years ago and has been flourishing ever since. I am a husband, father, and grandfather, and my family has always been my greatest support and inspiration. Thanks to them, my passion for motorcycles has turned into something more—a mission to bring legendary Honda Goldwing 1800 Trike models back to life. Every project is an extraordinary journey filled with emotions and challenges.",
+        "aboutInvited": "I invite you into my world, where every motorcycle has its own unique story. In my work, you will find machines that have been given a second life thanks to my dedication and passion. Each of them is like a family member—with its own character, soul, and a tale that I am eager to share with you. These are not just vehicles; they are pieces of history that connect people and create memories.If any of the models particularly catch your interest, I encourage you to reach out. I will be happy to share more about the restoration process, discuss technical details, and explain what makes these motorcycles so special. My passion is something I love to share, and every conversation about Honda Goldwings brings me great joy.",
+        "aboutThanks": "Thank you for being here with me. I hope my projects inspire you just as much as I am inspired by these incredible machines. Together, we can discover the magic hidden in each of these motorcycles. Welcome to the journey!",
+        "specsTitle": "Technical Specifications",
+        "specsList": [
+            "Engine: 1800cc",
+            "Power: 124 HP",
+            "Fuel Tank Capacity: 21 liters",
+            "Advanced safety systems"
+        ],
+        "specsLink": "Details",
+        "motorcycleGalleryTitle": "My Projects",
+        "motorcycleLink": "More",
+        "newsletterTitle": "Want to learn about new projects? Subscribe to our Newsletter.",
+        "newsletterNameLabel": "Name:",
+        "newsletterEmailLabel": "Email:",
+        "newsletterButton": "Sign up",
+        "footerText": "&copy; 2025 Honda Goldwing Trike 1800. All rights reserved. <a href=\"#\">Privacy Policy</a>"
+    }
+}

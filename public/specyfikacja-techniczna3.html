@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specyfikacja Techniczna</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #fff;
+        }
+        header {
+            background: linear-gradient(90deg, #e63946, #6a0572);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row; 
+            align-items: flex-start; /* Zmiana z center na flex-start */
+            justify-content: space-between;
+        }
+        .spec-text {
+            flex: 1;
+            text-align: left;
+        }
+        .motorcycle-thumbnail img {
+            width: 100%; /* Zmiana ze stałej szerokości */
+            max-width: 400px; /* Maksymalna szerokość */
+            height: auto; /* Usunięcie stałej wysokości */
+            aspect-ratio: inherit; /* Zachowaj proporcje */
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .motorcycle-thumbnail img:hover {
+            transform: scale(1.05);
+        }
+        #fullscreen-view {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        #fullscreen-image {
+            max-width: 90%;
+            max-height: 90%;
+            border: 5px solid white;
+        }
+        #close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 36px;
+            cursor: pointer;
+        }
+        .gallery-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #prev-btn {
+            left: 20px;
+        }
+        #next-btn {
+            right: 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 0.75rem 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background: #e63946;
+        }
+        .csc-description ul {
+    list-style: none;
+    padding-left: 0; /* Zmiana z 20px na 0 */
+}
+
+.csc-description li {
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+    font-size: 14px; /* Nowy rozmiar czcionki */
+}
+
+/* Media Query dla urządzeń mobilnych */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .motorcycle-thumbnail {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .motorcycle-thumbnail img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .csc-description {
+        margin-top: 15px;
+        padding: 10px;
+    }
+
+    .csc-description h3 {
+        font-size: 1.2em;
+    }
+
+    .csc-description li {
+        padding-left: 25px;
+        font-size: 13px;
+    }
+
+    .csc-description li:before {
+        width: 18px;
+        height: 18px;
+        top: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .spec-text {
+        width: 100%;
+    }
+    
+    #specs-list li {
+        font-size: 14px;
+    }
+    
+    .csc-description li {
+        padding-left: 0;
+    }
+    
+    .csc-description li:before {
+        display: none; /* Ukryj emoji na bardzo małych ekranach */
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Honda Goldwing Trike</h1>
+    </header>
+    <nav>
+        <a href="index.html" id="nav-home">Strona Główna</a>
+    </nav>
+    <section>
+    <div class="container">
+        <div class="spec-text">
+            <h2 class="spec-header">Honda Goldwing Trike 2008 CSC</h2>
+            <ul id="specs-list">
+                <li><strong>Rok:</strong> 2008</li>
+                <li><strong>Przebieg:</strong> 37 000 mi.</li>
+                <li><strong>Zabudowa:</strong> California Side</li>
+                <li><strong>Wyposażenie:</strong> Grzane manetki oraz oryginalne skórzane siedzisko</li>
+                <li><strong>Kolor:</strong>Czerwony</li>
+                <li><strong>Zawieszenie:</strong> Niezalezne </li>
+                <li><strong>Serwis:</strong> Po pełnym serwisie, gotowa do jazdy!</li>
+                <li><strong>Inne:</strong> Dodatkowy zbiornik paliwa, wskaźnik zmiany biegów, radio PL</li>
+                <li><strong>Wartość:</strong> 86 000 PLN</li>
+
+            </ul>
+            
+            <!-- Dodany opis -->
+            <div class="csc-description">
+                <h3>Zabudowa CSC - Kluczowe Zalety:</h3>
+                <p>Honda Goldwing 2012 w specjalnej zabudowie CSC łączy w sobie:</p>
+                <ul>
+                    <li>🛠️ <strong>Stabilną konstrukcję trójkołową</strong> idealną dla wymagających tras</li>
+                    <li>💺 <strong>Premium komfort</strong> z podgrzewanym siedzeniem i ergonomicznym kokpitem</li>
+                    <li>🧳 <strong>Przestrzeń bagażową 190L</strong> - aż 3 kaski pełne + akcesoria</li>
+                    <li>⚡ <strong>Silnik 1832cc</strong> z płynną 5-biegową skrzynią</li>
+                    <li>🔒 <strong>Systemy bezpieczeństwa:</strong> ABS</li>
+                </ul>
+                <p>Perfekcyjny wybór dla miłośników długich tras - łączy sportowego ducha z luksusem touringu!</p>
+            </div>
+        </div>
+            <div class="motorcycle-thumbnail">
+                <img src="http://localhost:3001/uploads/GLRed2008/1738445232798.webp", alt="Motocykl" onclick="openFullscreen(0)">
+            </div>
+        </div>
+        
+    </section>
+    
+
+    <div id="fullscreen-view">
+        <span id="close-btn" onclick="closeFullscreen()">×</span>
+        <button class="gallery-btn" id="prev-btn" onclick="changeImage(-1)">❮</button>
+        <img id="fullscreen-image" src="" alt="Motocykl">
+        <button class="gallery-btn" id="next-btn" onclick="changeImage(1)">❯</button>
+    </div>
+
+    <script>
+        const images = [
+                "http://localhost:3001/uploads/GLRed2008/1738445232798.webp",
+                "http://localhost:3001/uploads/GLRed2008/1738445232803.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232816.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232831.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232842.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232855.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232866.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232875.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232885.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232897.jpeg",
+                "http://localhost:3001/uploads/GLRed2008/1738445232907.jpeg",
+        ];
+        let currentIndex = 0;
+
+        function openFullscreen(index) {
+            currentIndex = index;
+            document.getElementById("fullscreen-image").src = images[currentIndex];
+            document.getElementById("fullscreen-view").style.display = "flex";
+        }
+
+        function closeFullscreen() {
+            document.getElementById("fullscreen-view").style.display = "none";
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            if (currentIndex >= images.length) currentIndex = 0;
+            document.getElementById("fullscreen-image").src = images[currentIndex];
+        }
+    </script>
+</body>
+</html>

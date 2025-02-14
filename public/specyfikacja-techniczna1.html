@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specyfikacja Techniczna</title>
+    <link rel="stylesheet" href="css/styles spec.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Honda Goldwing Trike</h1>
+    </header>
+    <nav>
+        <a href="index.html" id="nav-home">Strona Główna</a>
+    </nav>
+    <section>
+    <div class="container">
+        <div class="spec-text">
+            <h2 class="spec-header">Honda Goldwing Trike 2010 CSC</h2>
+            <ul id="specs-list">
+                <li><strong>Rok:</strong> 2010</li>
+                <li><strong>Przebieg:</strong> 38 000 mi.</li>
+                <li><strong>Zabudowa:</strong> California Side</li>
+                <li><strong>Wyposażenie:</strong> Grzane manetki oraz siedzisko</li>
+                <li><strong>Kolor:</strong> Biała perła</li>
+                <li><strong>Serwis:</strong> Po pełnym serwisie, gotowa do jazdy!</li>
+                <li><strong>Inne:</strong> Dodatkowy zbiornik paliwa, wskaźnik zmiany biegów, radio PL</li>
+                <li><strong>Wartość:</strong> 112 000 PLN</li>
+            </ul>
+            
+            <!-- Dodany opis -->
+            <div class="csc-description">
+                <h3>Zabudowa CSC - Kluczowe Zalety:</h3>
+                <p>Honda Goldwing 2012 w specjalnej zabudowie CSC łączy w sobie:</p>
+                <ul>
+                    <li>🛠️ <strong>Stabilną konstrukcję trójkołową</strong> idealną dla wymagających tras</li>
+                    <li>💺 <strong>Premium komfort</strong> z podgrzewanym siedzeniem i ergonomicznym kokpitem</li>
+                    <li>🧳 <strong>Przestrzeń bagażową 190L</strong> - aż 3 kaski pełne + akcesoria</li>
+                    <li>⚡ <strong>Silnik 1832cc</strong> z płynną 5-biegową skrzynią</li>
+                    <li>🔒 <strong>Systemy bezpieczeństwa:</strong> ABS</li>
+                </ul>
+                <p>Perfekcyjny wybór dla miłośników długich tras - łączy sportowego ducha z luksusem touringu!</p>
+            </div>
+        </div>
+            <div class="motorcycle-thumbnail">
+                <img src="http://localhost:3001/uploads/GLWhite2012/1738439255148.jpg" alt="Motocykl" onclick="openFullscreen(0)">
+            </div>
+        </div>
+        
+    </section>
+    
+
+    <div id="fullscreen-view">
+        <span id="close-btn" onclick="closeFullscreen()">×</span>
+        <button class="gallery-btn" id="prev-btn" onclick="changeImage(-1)">❮</button>
+        <img id="fullscreen-image" src="" alt="Motocykl">
+        <button class="gallery-btn" id="next-btn" onclick="changeImage(1)">❯</button>
+    </div>
+
+    <script>
+        const images = [
+                "http://localhost:3001/uploads/GLWhite2012/1738439255148.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255116.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255119.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255124.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255128.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255131.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255135.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255138.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255142.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255145.jpg",
+                "http://localhost:3001/uploads/GLWhite2012/1738439255150.jpg",
+        ];
+        let currentIndex = 0;
+
+        function openFullscreen(index) {
+            currentIndex = index;
+            document.getElementById("fullscreen-image").src = images[currentIndex];
+            document.getElementById("fullscreen-view").style.display = "flex";
+        }
+
+        function closeFullscreen() {
+            document.getElementById("fullscreen-view").style.display = "none";
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            if (currentIndex >= images.length) currentIndex = 0;
+            document.getElementById("fullscreen-image").src = images[currentIndex];
+        }
+    </script>
+</body>
+</html>

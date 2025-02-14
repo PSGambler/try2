@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honda Goldwing Trike 1800 - Specyfikacja Techniczna</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #e63946, #6a0572);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        .language-selector {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .language-button {
+            background: transparent;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+        .language-button img {
+            width: 30px;
+            height: auto;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 0.75rem 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background: #e63946;
+        }
+        .section {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 1200px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #e63946;
+            margin-top: 0;
+        }
+        .specs-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .specs-list li {
+            font-size: 16px;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .specs-list li::before {
+            content: "•";
+            color: #e63946;
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+        .specs-highlight {
+            color: #000000;
+            font-weight: bold;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #0a0a0a;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Query dla urządzeń mobilnych */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+                margin: 0 1rem;
+            }
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 0.1rem 0;
+                padding: 0.1rem;
+                text-align: center;
+            }
+            .section {
+                padding: 1rem;
+                margin: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="header-title">Honda Goldwing Trike 1800</h1>
+        <div class="language-selector">
+            <button class="language-button" onclick="changeLanguage('pl')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Flag_of_Poland.svg" alt="Polska" class="flag">
+            </button>
+            <button class="language-button" onclick="changeLanguage('en')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg" alt="UK" class="flag">
+            </button>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html" id="nav-home">Strona Główna</a>
+    </nav>
+    <section id="specs" class="section">
+        <h2 id="specs-title">Specyfikacja Techniczna</h2>
+        <ul class="specs-list">
+            <li><span class="specs-highlight">Silnik:</span> Widlasty sześciocylindrowy (flat-6) o pojemności 1832 cm³.</li>
+            <li><span class="specs-highlight">Moc:</span> 118 KM przy 5500 obr./min.</li>
+            <li><span class="specs-highlight">Moment obrotowy:</span>167 Nmprzy 4000 obr./min.</li>
+            <li><span class="specs-highlight">Skrzynia biegów:</span> 5-biegowa manualna z elektrycznym wspomaganiem zmiany biegów. Automatyczny wsteczny</li>
+            <li><span class="specs-highlight">Zawieszenie przednie:</span> Widelec teleskopowy o skoku 140 mm.</li>
+            <li><span class="specs-highlight">Zawieszenie tylne:</span> Podwójne amortyzatory z regulacją wstępnego napięcia sprężyny.</li>
+            <li><span class="specs-highlight">Hamulce:</span> Przód – podwójne tarcze 296 mm, tył – pojedyncza tarcza 316 mm z systemem ABS.</li>
+            <li><span class="specs-highlight">Długość:</span> 2630 mm.</li>
+            <li><span class="specs-highlight">Szerokość:</span> 945 mm.</li>
+            <li><span class="specs-highlight">Wysokość:</span> 1450 mm.</li>
+            <li><span class="specs-highlight">Masa własna:</span> 410 kg.</li>
+            <li><span class="specs-highlight">System audio:</span> Radio FM/AM, odtwarzacz CD, wejście AUX, głośniki 80 W.</li>
+            <li><span class="specs-highlight">Nawigacja:</span> Wbudowany system GPS (w wyższych wersjach wyposażenia).</li>
+            <li><span class="specs-highlight">Oświetlenie:</span> Reflektory ksenonowe z automatycznym poziomowaniem.</li>
+            <li><span class="specs-highlight">Komfort:</span> Podgrzewane siedzenia, manetki</li>
+            <li><span class="specs-highlight">Opony:</span> Przód – 30/70 R18, tył – dwie opony 205/65 R15.</li>
+            <li><span class="specs-highlight">Bagażnik:</span> Główny – 50 litrów, schowki boczne – 40 litrów.</li>
+            <li><span class="specs-highlight">Zużycie paliwa:</span> Średnio 6,5-7,5 l/100 km.</li>
+            <li><span class="specs-highlight">Zbiornik paliwa:</span> 25 litrów – zasięg do 350 km.</li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2025 Honda Goldwing Trike 1800. Wszystkie prawa zastrzeżone. <a href="#">Polityka prywatności</a></p>
+    </footer>
+</body>
+</html>

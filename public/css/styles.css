@@ -1,0 +1,359 @@
+/* style.css */
+body {
+    font-family:'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fff;
+}
+header {
+    background: linear-gradient(90deg, #e63946, #6a0572);
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+
+}
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+.language-selector {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+.language-button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.language-button img {
+    width: 30px;
+    height: auto;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background: #444;
+    padding: 0.75rem 0;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+nav a:hover {
+    background:#e63946;
+}
+.section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 1200px;
+    text-align: center;
+}
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+.card h2 {
+    margin-top: 0;
+    color: #e63946;
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+footer a {
+    color: #e63946;
+    text-decoration: none;
+}
+
+/* Media Query dla urządzeń mobilnych */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Mniejsza czcionka na mobilnych */
+        margin: 0 1rem;
+    }
+
+    nav {
+        flex-direction: column; /* Zmiana układu menu na kolumnowy */
+    }
+
+    nav a {
+        margin: 0.1rem 0; /* Większa przestrzeń między linkami */
+        padding: 0.1rem;
+        text-align: center;
+    }
+
+    .section {
+        padding: 1rem;
+        margin: 0.5rem;
+        text-align: center;
+    }
+
+    .card {
+        padding: rem;
+    }
+
+    .card img {
+        width: 100%;
+        max-height: 250px; /* Maksymalna wysokość zdjęć */
+        object-fit: cover; /* Zapewnia dopasowanie obrazka do kontenera */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Mniejsza czcionka w stopce */
+    }
+       }
+.gallery-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.gallery-thumbnails {
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.gallery-thumbnails img {
+width: 150px;
+height: 100px;
+object-fit: cover;
+border-radius: 8px;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+
+.gallery-thumbnails img:hover {
+transform: scale(1.1);
+}
+
+.fullscreen {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+background: rgba(0, 0, 0, 0.8);
+justify-content: center;
+align-items: center;
+z-index: 1000;
+cursor: pointer;
+}
+
+.fullscreen img {
+max-width: 90%;
+max-height: 90%;
+border-radius: 10px;
+}
+/* Styl dla widoku pełnoekranowego */
+#fullscreen-view {
+    display: none; /* Domyślnie ukryte */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+/* Styl dla obrazu w pełnym ekranie */
+#fullscreen-image {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid white; /* Opcjonalnie: dodajemy obramowanie dla lepszej widoczności */
+}
+#prev-btn {
+    left: 20px;
+}
+#next-btn {
+    right: 20px;
+}
+/* Styl dla przycisku zamknięcia */
+#close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+}
+ .motorcycle-gallery-container {
+    display: flex;
+    gap: 20px; /* Odstęp między miniaturami */
+    flex-wrap: wrap; /* Miniatury przechodzą do nowego wiersza, jeśli nie mieszczą się na szerokości ekranu */
+    justify-content: center; /* Wyśrodkowanie miniatur w poziomie */
+    align-items: center; /* Wyśrodkowanie miniatur w pionie */
+    margin: 0 auto; /* Wyśrodkowanie kontenera w całej sekcji */
+}
+
+.motorcycle-thumbnails {
+display: flex;
+flex-direction: column; /* Elementy wewnątrz miniatury (obrazek, opis, link) układane pionowo */
+align-items: center;
+text-align: center;
+max-width: 200px;
+}
+
+.motorcycle-thumbnails img {
+width: 200px;         /* Stała szerokość */
+height: 150px;        /* Stała wysokość */
+object-fit: cover;    /* Dopasowanie obrazu, aby nie był zniekształcony */
+border-radius: 8px;   /* Zaokrąglone rogi */
+cursor: pointer;      /* Kursor zmienia się w rączkę po najechaniu */
+transition: transform 0.3s ease; /* Płynne powiększenie przy hoverze */
+}
+
+.motorcycle-thumbnails img:hover {
+transform: scale(1.05);
+}
+
+.thumbnail-caption {
+font-size: 16px;
+margin-top: 5px;
+font-weight: bold;
+}
+
+.thumbnail-link {
+margin-top: 5px;
+font-size: 15px;
+text-decoration: none;
+color: #007bff;
+}
+
+.thumbnail-link:hover {
+text-decoration: underline;
+}
+#specs-list {
+list-style-type: none; /* Usuwa punkty listy */
+padding-left: 0; /* Usuwa wcięcie */
+}
+#specs-list li {
+font-size: 16px;
+margin-bottom: 5px;
+}
+.about-container {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 20px;
+text-align: center;
+flex-wrap: wrap;
+}
+
+.about-text {
+flex: 1;
+max-width: 600px;
+}
+
+.about-text h2 {
+text-align: center; /* Nagłówek wyśrodkowany */
+}
+
+.about-text p {
+text-align: justify; /* Wyjustowanie tekstu */
+}
+
+.about-image img {
+max-width: 450px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+.about-container {
+flex-direction: column;
+}
+
+.about-image img {
+max-width: 60%;
+margin-top: 15px;
+}
+}
+form {
+    max-width: 500px;
+    margin: 2rem auto;
+    text-align: left;
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+input, textarea, button {
+    width: 90%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background:linear-gradient(90deg, #e63946, #6a0572); 
+    color: #fff; 
+    border: none; 
+    cursor: pointer; 
+    padding: 0.75rem 1.5rem; 
+    border-radius: 5px; 
+    font-size: 1rem; 
+    width: 100%; 
+}
+
+button:hover {
+    background: #c5303b;
+}
+
+form#newsletter-form {
+    max-width: 400px; /* Ograniczenie szerokości formularza */
+    margin: 0 auto; /* Wyśrodkowanie formularza */
+    text-align: left;
+}
+
+form#newsletter-form input,
+form#newsletter-form button {
+    width: 100%;  /* Upewniamy się, że wszystkie elementy mają taką samą szerokość */
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Zapobiega rozszerzaniu przez padding */
+}
+
+form#newsletter-form button {
+    background: linear-gradient(90deg, #e63946, #6a0572);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+}
+
+form#newsletter-form button:hover {
+    background: #c5303b;
+}

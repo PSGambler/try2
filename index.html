@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prześlij zdjęcia</title>
+</head>
+<body>
+  <h1>Prześlij zdjęcia</h1>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <label for="folderName">Nazwa folderu:</label>
+    <input type="text" id="folderName" name="folderName" required>
+    <br><br>
+    <label for="images">Wybierz zdjęcia:</label>
+    <input type="file" id="images" name="images" multiple>
+    <br><br>
+    <button type="submit">Prześlij</button>
+  </form>
+</body>
+</html>
