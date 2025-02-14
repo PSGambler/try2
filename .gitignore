@@ -1,0 +1,25 @@
+# Ignorowanie katalogu node_modules (nie wrzucamy zależności do Gita)
+node_modules/
+
+# Ignorowanie plików konfiguracyjnych środowiska (np. klucze API, hasła)
+.env
+
+# Ignorowanie katalogu z budowanym kodem (np. w TypeScript lub Webpack)
+dist/
+build/
+
+# Ignorowanie logów
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorowanie zależności dla PM2 (jeśli używasz)
+.pnpm-store/
+
+# Ignorowanie plików edytorów (np. VS Code)
+.vscode/
+.idea/
+.DS_Store
+
+# Ignorowanie cache testów i pokrycia kodu
+coverage/
