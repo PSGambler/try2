@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const path = require('path'); // Import modułu 'path'
 const fs = require('fs');
 const multer = require('multer');
+// Inicjalizacja aplikacji Express
 const app = express();
 // Ustawienie katalogu dla plików statycznych
 app.use(express.static(path.join(__dirname, 'public')));
@@ -15,9 +16,12 @@ app.get('/', (req, res) => {
 
 // Port dla Render (Render wymaga process.env.PORT)
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Serwer działa na porcie ${PORT}`));
+app.listen(PORT, () => { 
+    console.log(`Serwer działa na porcie ${PORT}`)
+    
+});
 
-// Inicjalizacja aplikacji Express
+
 
 
 // Middleware
